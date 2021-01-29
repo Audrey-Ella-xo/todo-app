@@ -20,6 +20,7 @@
   border-radius: 4px;
   max-width: 400px;
   padding: 5px;
+  margin-top: 20px;
 }
 
 .todo {
@@ -32,4 +33,5 @@
   justify-content: space-between;
   margin-bottom: 6px;
   padding: 3px 10px;
+  height: 20px;
 }
