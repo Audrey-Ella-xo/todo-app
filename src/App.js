@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import './App.css';
 import Todo from './components/Todo'
+import TodoForm from './components/TodoForm'
+
 function App() {
   const [todos, setTodos] = useState([
     {text: "Learn react"},
@@ -22,6 +24,10 @@ function App() {
             todo={todo}
           />
         ))}
+      </div>
+
+      <div>
+        <TodoForm />
       </div>
     </div>
   );
