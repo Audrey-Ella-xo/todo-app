@@ -4,9 +4,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
+        <h1>
           React ToDo Application
-        </p>
+        </h1>
       </header>
     </div>
   );
