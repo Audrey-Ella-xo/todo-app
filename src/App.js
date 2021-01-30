@@ -14,6 +14,12 @@ function App() {
     const newTodos = [...todos, { text }];
     setTodos(newTodos);
   }
+
+  const completeTodo = item => {
+    const newTodos = [ ...todos]
+    newTodos[index].isCompleted = true
+    setTodos(newTodos);
+  }
   
   return (
     <div className="App">
