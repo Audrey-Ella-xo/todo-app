@@ -9,6 +9,12 @@ function App() {
     {text: "Study"},
     {text: "Take a Nap"} 
   ]);
+
+  const addTodo = text => {
+    const newTodos = [...todos, { text }];
+    setTodos(newTodos);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -25,10 +31,7 @@ function App() {
           />
         ))}
       </div>
-
-      <div>
-        <TodoForm />
-      </div>
+        <TodoForm addTodo={addTodo}/>
     </div>
   );
 }
