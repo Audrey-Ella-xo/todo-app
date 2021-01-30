@@ -15,9 +15,9 @@ function App() {
     setTodos(newTodos);
   }
 
-  const completeTodo = item => {
-    const newTodos = [ ...todos]
-    newTodos[index].isCompleted = true
+  const completeTodo = index => {
+    const newTodos = [...todos];
+    newTodos[index].isCompleted = true;
     setTodos(newTodos);
   }
   
@@ -34,6 +34,7 @@ function App() {
             key={index}
             index={index}
             todo={todo}
+            completeTodo={completeTodo}
           />
         ))}
       </div>
