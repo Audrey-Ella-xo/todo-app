@@ -5,16 +5,16 @@ import TodoForm from './components/TodoForm'
 
 function App() {
   const [todos, setTodos] = useState([
-    {text: "Learn react"},
-    {text: "Study"},
-    {text: "Take a Nap"} 
+    {text: "Learn react", isCompleted: false},
+    {text: "Study", isCompleted: false},
+    {text: "Take a Nap", isCompleted: false} 
   ]);
 
   const addTodo = text => {
     const newTodos = [...todos, { text }];
     setTodos(newTodos);
   }
-
+  
   return (
     <div className="App">
       <header className="App-header">
