@@ -20,6 +20,12 @@ function App() {
     newTodos[index].isCompleted = true;
     setTodos(newTodos);
   }
+
+  const removeTodo = index => {
+    const newTodos = [...todos]
+    newTodos.splice(index, 1)
+    setTodos(newTodos);
+  }
   
   return (
     <div className="App">
@@ -35,6 +41,7 @@ function App() {
             index={index}
             todo={todo}
             completeTodo={completeTodo}
+            removeTodo={removeTodo}
           />
         ))}
       </div>
