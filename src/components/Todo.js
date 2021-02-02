@@ -1,10 +1,18 @@
 import React from 'react'
 
-const Todo = ({ todo }) => {
+const Todo = ({ todo, index, completeTodo, removeTodo }) => {
     return(
-        <div className="todo">
+        <div 
+        className="todo"
+        style={{textDecoration: todo.isCompleted ? 'line-through' : ''}}
+        >
             {todo.text}
+            <div>
+                <button onClick={() => completeTodo(index)}>Complete?</button>
+                <button onClick={() => removeTodo(index)}>Delete</button>
+            </div>
         </div>
+        
     )
 }
 

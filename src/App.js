@@ -5,9 +5,9 @@ import TodoForm from './components/TodoForm'
 
 function App() {
   const [todos, setTodos] = useState([
-    {text: "Learn react"},
-    {text: "Study"},
-    {text: "Take a Nap"} 
+    {text: "Learn react", isCompleted: false},
+    {text: "Study", isCompleted: false},
+    {text: "Take a Nap", isCompleted: false} 
   ]);
 
   const addTodo = text => {
@@ -15,6 +15,18 @@ function App() {
     setTodos(newTodos);
   }
 
+  const completeTodo = index => {
+    const newTodos = [...todos];
+    newTodos[index].isCompleted = true;
+    setTodos(newTodos);
+  }
+
+  const removeTodo = index => {
+    const newTodos = [...todos]
+    newTodos.splice(index, 1)
+    setTodos(newTodos);
+  }
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -28,6 +40,8 @@ function App() {
             key={index}
             index={index}
             todo={todo}
+            completeTodo={completeTodo}
+            removeTodo={removeTodo}
           />
         ))}
       </div>
